@@ -5,34 +5,72 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EasyEat.Windows"
         mc:Ignorable="d" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen"
-        Title="EatDishWindow" Height="700" Width="1100" Background="#7EB283">
+        Title="EatDishWindow" Height="700" Width="1100" Background="#AEEDB5">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="400"/>
         </Grid.ColumnDefinitions>
-        
-        <TextBox Name="SearchBox" TextChanged="SearchBox_TextChanged" />
 
-        <Border Background="DimGray" Opacity="0.28" Margin="10 10 10 10"  Grid.Row="1" CornerRadius="20 20 20 20">
-            <Border.Effect>
-                <DropShadowEffect BlurRadius="5" ShadowDepth="2" Opacity="0.28"/>
-            </Border.Effect>
-        </Border>
+        <Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" VerticalAlignment="Top" HorizontalAlignment="Right" Name="svg250" Width="821" Height="197" Grid.ColumnSpan="3" Margin="0,-3,-7,0">
+            <Canvas.RenderTransform>
+                <TranslateTransform X="0" Y="0"/>
+            </Canvas.RenderTransform>
+            <Canvas.Resources/>
+            <!--Unknown tag: sodipodi:namedview-->
+            <Canvas Name="g257">
+                <Canvas.RenderTransform>
+                    <TranslateTransform X="-0.5" Y="-0.5"/>
+                </Canvas.RenderTransform>
+                <Canvas Name="g229">
+                    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path225" Fill="#FFFF833E" Data="M 137.5 32 C 97.8759 6.11225 7 3 7 3 H 815.5 V 103.857 C 815.496 101.64 815.323 74.2671 809 60.5 802.583 46.527 799.2 36.3199 784 34 c -12.445 -1.8994 -24.93 6.2939 -37.5 7 -21.629 1.2149 -32 -7 -43 -20.5 -9.744 -11.95855 -23.5 -15 -32 -9 -8.5 6 -8.709 9.5014 -19 22.5 -10.291 12.9986 -22.613 19.9864 -39 22.5 C 594.58 59.4022 582.481 52.2586 567 41 539.5 21 546 26 530.5 16 c -31.021 -20.01339 -56 29.5 -94 10 -26.609 -13.6547 -37 33.5 -69 30 -43.036 -4.7071 -26.857 35.8454 -16.5 57.5 16.5 34.5 -14.5 79.5 -63.5 72.5 -49 -7 -61.5 -40 -53.5 -64.5 8 -24.5 26.812 -32.6783 14 -47 -12.558 -14.0379 -26.5 8 -40.5 0 C 190.505 64.7886 212 37 192 32 167.769 25.9422 175 56.5 137.5 32 Z"/>
+                    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path227" StrokeThickness="5" Stroke="#FFFF5E03" StrokeLineJoin="Round" Data="m 7 3 c 0 0 90.8759 3.11225 130.5 29 37.5 24.5 30.269 -6.0578 54.5 0 20 5 -1.495 32.7886 15.5 42.5 14 8 27.942 -14.0379 40.5 0 12.812 14.3217 -6 22.5 -14 47 -8 24.5 4.5 57.5 53.5 64.5 49 7 80 -38 63.5 -72.5 -10.357 -21.6546 -26.536 -62.2071 16.5 -57.5 32 3.5 42.391 -43.6547 69 -30 38 19.5 62.979 -30.01339 94 -10 15.5 10 9 5 36.5 25 15.481 11.2586 27.58 18.4022 46.5 15.5 16.387 -2.5136 28.709 -9.5014 39 -22.5 10.291 -12.9986 10.5 -16.5 19 -22.5 8.5 -6 22.256 -2.95855 32 9 11 13.5 21.371 21.7149 43 20.5 12.57 -0.7061 25.055 -8.8994 37.5 -7 15.2 2.3199 18.583 12.527 25 26.5 6.592 14.3543 6.5 43.5 6.5 43.5 V 3 Z"/>
+                </Canvas>
+            </Canvas>
+        </Canvas>
 
-        <Border Background="DimGray" Opacity="0.28" Margin="10 10 10 10"  Grid.Row="1" Grid.Column="2" CornerRadius="20 20 20 20">
-            <Border.Effect>
-                <DropShadowEffect BlurRadius="5" ShadowDepth="2" Opacity="0.28"/>
-            </Border.Effect>
-        </Border>
-        
-        <ListView Name="ProductsLV" Margin="10 10 10 10" ItemContainerStyle="{StaticResource ProductsItemStyle}" Style="{StaticResource ProductsStyleLV}" SelectionChanged="ProductsLV_SelectionChanged" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Grid.Row="1">
+        <Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Name="svg68" Width="1104.5" Height="169" VerticalAlignment="Top" Grid.ColumnSpan="3" Margin="-4,499,-1,0">
+            <Canvas.RenderTransform>
+                <TranslateTransform X="0" Y="0"/>
+            </Canvas.RenderTransform>
+            <Canvas.Resources/>
+            <!--Unknown tag: sodipodi:namedview-->
+            <Canvas Name="g184">
+                <Canvas.RenderTransform>
+                    <TranslateTransform X="0" Y="0"/>
+                </Canvas.RenderTransform>
+                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path56" Fill="#FFFF833E" Data="m 368 165.5 c 14 0 51.365 -1.315 84.5 -17 22.819 -10.802 18.392 -67.1481 60 -47.5 18 8.5 9.5 34.278 45 19 35.5 -15.279 44 8.5 52.5 20 10.248 13.865 24.831 18.338 34 0 6.5 -13 10.243 -26.949 23.5 -25 17 2.5 14 22.5 28 33.5 13.126 10.313 30.141 3.788 46 9 15.062 4.95 34.546 7.128 51.906 8 H 836 c 0 0 -19.401 1.165 -42.594 0 z"/>
+                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path58" StrokeThickness="5" Stroke="#FFFF5E03" StrokeLineJoin="Round" Data="m 368 165.5 c 14 0 51.365 -1.315 84.5 -17 22.819 -10.802 18.392 -67.1481 60 -47.5 18 8.5 9.5 34.278 45 19 35.5 -15.279 44 8.5 52.5 20 10.248 13.865 24.831 18.338 34 0 6.5 -13 10.243 -26.949 23.5 -25 17 2.5 14 22.5 28 33.5 13.126 10.313 30.141 3.788 46 9 35.185 11.563 94.5 8 94.5 8 z"/>
+                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path60" Fill="#FFFF833E" StrokeThickness="5" Stroke="#FFFF5E03" StrokeLineJoin="Round" Data="m 610.427 62.3899 c -3.477 4.7144 -2.986 9.9607 0 15 3.873 6.534 11.437 8.7921 18.5 6 5.559 -2.1972 10.256 -6.5284 10 -12.5 -0.242 -5.6709 -2.864 -11.0836 -8 -13.5 -6.575 -3.0936 -16.186 -0.8482 -20.5 5 z"/>
+                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path62" Fill="#FFFF833E" StrokeThickness="5" Stroke="#FFFF5E03" StrokeLineJoin="Round" Data="m 509.257 17.3169 c -7.53 10.5626 -6.468 22.3171 0 33.6081 8.386 14.6395 24.768 19.699 40.065 13.4432 C 561.36 59.4451 571.531 49.741 570.978 36.3614 570.454 23.6556 564.776 11.5281 553.653 6.11415 539.413 -0.817123 518.598 4.21373 509.257 17.3169 Z"/>
+                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path64" Fill="#FFFF833E" StrokeThickness="5" Stroke="#FFFF5E03" StrokeLineJoin="Round" Data="M 1088.96 141.193 C 1099.52 126.208 1102 94 1102 94 v 72 h -60 c 0 0 34.2 -6.713 46.96 -24.807 z" HorizontalAlignment="Center" Canvas.Left="-3" VerticalAlignment="Top" Canvas.Top="1"/>
+                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path66" Fill="#FFFF833E" StrokeThickness="5" Stroke="#FFFF5E03" StrokeLineJoin="Round" Data="m 2.5 146.5 v 20 h 63 c 0 0 -19.5 0 -30 -5.5 -5.028 -2.634 -12.364 -13.584 -17.5 -16 -6.5754 -3.094 -15.5 1.5 -15.5 1.5 z"/>
+            </Canvas>
+        </Canvas>
+
+        <StackPanel Orientation="Vertical" VerticalAlignment="Top"  Margin="20 27 0 20" >
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Border Background="#D6FFDA" BorderBrush="#89BB8F"  BorderThickness="3 3 1.5 3" Width="70"  Height="42" CornerRadius="10 0 0 10">
+                    <TextBlock Text="Поиск:" HorizontalAlignment="Center" FontSize="16"  VerticalAlignment="Center" Opacity="0.5"/>
+                </Border>
+
+                <Border Background="#E5FFE8" BorderBrush="#89BB8F"  BorderThickness="1.5 3 3 3" Width="290"  Height="42" CornerRadius="0 10 10 0">
+                    <TextBox Name="SearchBox" TextChanged="SearchBox_TextChanged"  Width="275" Height="40" FontSize="16" VerticalAlignment="Center" VerticalContentAlignment="Center" TextAlignment="Left"/>
+                </Border>
+            </StackPanel>
+        </StackPanel>
+
+
+
+
+
+
+
+
+        <ListView Name="ProductsLV" Margin="20 98 0 30" Width="366"  ItemContainerStyle="{StaticResource ProductsItemStyle}" Style="{StaticResource ProductsStyleLV}" SelectionChanged="ProductsLV_SelectionChanged" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Grid.Row="1">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid Margin="10">
@@ -52,7 +90,34 @@
             </ListView.ItemTemplate>
         </ListView>
 
+        <Border Background="#4B998B" BorderBrush="#2E645A" Width="366" BorderThickness="4" Margin="20 77 0 20" Height="23" VerticalAlignment="Top" Grid.Row="1" CornerRadius="10 10 0 0"/>
+
+
+        <ListView Name="DishLV" Margin="0 98 20 30" Width="366" ItemContainerStyle="{StaticResource ProductsItemStyle}" Style="{StaticResource ProductsStyleLV}" SelectionChanged="ProductsLV_SelectionChanged" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Grid.Column="2" Grid.Row="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="10">
+                        <StackPanel Orientation="Horizontal">
+                            <!--<Viewbox Height="22" VerticalAlignment="Center" HorizontalAlignment="Left">
+                                <CheckBox Content="{Binding Name}" x:Name="ProductCheckBox"/>
+                            </Viewbox>-->
+                            <TextBlock x:Name="ProductName" Text="{Binding ProductName}" MaxWidth="300" TextWrapping="Wrap" FontSize="18"/>
+
+                            <TextBlock x:Name="ProductNameCalories" Text="{Binding ProductCalories}" MaxWidth="300" TextWrapping="Wrap" FontSize="18"/>
+
+                            <!--<TextBlock x:Name="ProductName" Text="{Binding Name}" FontSize="24" HorizontalAlignment="Center" FontFamily="Comic Sans MS" Margin="0 15 0 0" />-->
+
+
+
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Border Background="#4B998B" BorderBrush="#2E645A" BorderThickness="4"  Margin="0 77 20 20" Height="23" Width="366" VerticalAlignment="Top" Grid.Column="2" Grid.Row="1" CornerRadius="10 10 0 0"/>
+
+
         <Frame Grid.Row="1" Grid.Column="1" Name="EatDishWindowFrame" NavigationUIVisibility="Hidden" Margin="10 150 10 150" Height="260"/>
-        
+
     </Grid>
 </Window>

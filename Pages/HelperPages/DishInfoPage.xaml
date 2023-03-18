@@ -5,35 +5,40 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:EasyEat.Pages.HelperPages"
       mc:Ignorable="d" 
-      d:DesignHeight="260" d:DesignWidth="346.666666666667"
+      d:DesignHeight="250" d:DesignWidth="280"
       Title="DishInfoPage">
 
     <Grid>
-        <Border Background="DimGray" Opacity="0.28" Grid.Row="1" CornerRadius="20">
-            <Border.Effect>
-                <DropShadowEffect BlurRadius="5" ShadowDepth="2" Opacity="0.28"/>
-            </Border.Effect>
+        <Border Background="#A5D8AB" BorderBrush="#52926F" BorderThickness="3" Grid.Row="1" CornerRadius="20">
         </Border>
+
+
 
         <StackPanel Orientation="Vertical">
             <!--<Label Content="ProductNameLabel" HorizontalAlignment="Center" Margin="5" FontSize="20"/>-->
-            <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" Margin="5" FontSize="20"/>
+            <Border Background="#D6FFDA" BorderBrush="#23C68C" BorderThickness="3" Grid.Row="1" CornerRadius="10" Margin="5 10 5 0" HorizontalAlignment="Center">
+                <TextBlock Text="{Binding Name}" TextWrapping="Wrap" TextAlignment="Center" FontSize="18" Margin="5"/>
+            </Border>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <!--<TextBlock Text="Ккал на 1 гр:" FontSize="14"/>-->
-                <TextBlock Text="{Binding CaloriesPerGram, StringFormat={}{0} ккал/гр }" FontSize="14"/>
+                <TextBlock Text="{Binding CaloriesPerGram, StringFormat={}{0} ккал\\гр }" FontSize="14"/>
             </StackPanel>
-
 
         </StackPanel>
 
         <StackPanel Orientation="Vertical" VerticalAlignment="Center">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <TextBox x:Name="GrammBox" Width="60" Height="22" Margin="5 5 0 5"/>
-                <TextBlock Text="Гр." Margin="0 5 5 5" VerticalAlignment="Center"/>
+                <Border Background="Transparent" BorderBrush="#4A634D" Margin=" 0 0 0 0" BorderThickness="1 1 0.5 1" Width="30"  Height="26" CornerRadius="2.5 0 0 2.5">
+                    <TextBlock Text="Гр." HorizontalAlignment="Center" FontSize="16"  VerticalAlignment="Center"/>
+                </Border>
+
+                <Border Background="#98C79D" BorderBrush="#4A634D" Margin=" 0 0 0 0" BorderThickness="0.5 1 1 1" Width="90"  Height="26" CornerRadius="0 2.5 2.5 0">
+                    <TextBox x:Name="GrammBox" MaxLength="7"  Width="80" Height="22" FontSize="16" VerticalAlignment="Center" VerticalContentAlignment="Center" TextAlignment="Center" PreviewKeyDown="GrammBox_PreviewKeyDown"/>
+                </Border>
             </StackPanel>
         </StackPanel>
 
-        <Button Content="Добавить" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="40" Width="100"/>
+        <Button Content="Добавить" Name="AddProduct" BorderBrush="#FF5E03" BorderThickness="2" Background="#FF833E" Click="AddProduct_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="30" Width="100" Style="{DynamicResource NavigationButtonsStyle}"/>
     </Grid>
 </Page>

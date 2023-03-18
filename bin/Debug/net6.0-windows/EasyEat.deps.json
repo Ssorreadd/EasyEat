@@ -8,11 +8,17 @@
     ".NETCoreApp,Version=v6.0": {
       "EasyEat/1.0.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Sqlite": "7.0.4",
-          "BaseLibrary": "1.0.0.0"
+          "BaseLibrary": "1.0.0",
+          "Microsoft.EntityFrameworkCore.Sqlite": "7.0.4"
         },
         "runtime": {
           "EasyEat.dll": {}
+        }
+      },
+      "Microsoft.Data.Sqlite/7.0.3": {
+        "dependencies": {
+          "Microsoft.Data.Sqlite.Core": "7.0.4",
+          "SQLitePCLRaw.bundle_e_sqlite3": "2.1.4"
         }
       },
       "Microsoft.Data.Sqlite.Core/7.0.4": {
@@ -380,12 +386,14 @@
           }
         }
       },
-      "BaseLibrary/1.0.0.0": {
+      "BaseLibrary/1.0.0": {
+        "dependencies": {
+          "Microsoft.Data.Sqlite": "7.0.3",
+          "Microsoft.Data.Sqlite.Core": "7.0.4",
+          "Microsoft.EntityFrameworkCore.Sqlite": "7.0.4"
+        },
         "runtime": {
-          "BaseLibrary.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "BaseLibrary.dll": {}
         }
       }
     }
@@ -395,6 +403,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.Data.Sqlite/7.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uumx0bb4FsN7ApP0ZoQDfSJi9c2Xen0PlXCT2BF27cM+yUMFzDEhqxR7/1/DV8ck4mYtL9yShBoOa7jeJ3736w==",
+      "path": "microsoft.data.sqlite/7.0.3",
+      "hashPath": "microsoft.data.sqlite.7.0.3.nupkg.sha512"
     },
     "Microsoft.Data.Sqlite.Core/7.0.4": {
       "type": "package",
@@ -571,8 +586,8 @@
       "path": "system.text.json/7.0.0",
       "hashPath": "system.text.json.7.0.0.nupkg.sha512"
     },
-    "BaseLibrary/1.0.0.0": {
-      "type": "reference",
+    "BaseLibrary/1.0.0": {
+      "type": "project",
       "serviceable": false,
       "sha512": ""
     }

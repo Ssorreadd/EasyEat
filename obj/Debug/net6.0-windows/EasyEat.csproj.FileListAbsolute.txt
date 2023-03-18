@@ -153,3 +153,5 @@ C:\Users\студент\Desktop\EasyEat-main\obj\Debug\net6.0-windows\EasyEat.ge
 C:\Users\студент\Desktop\EasyEat-main\obj\Debug\net6.0-windows\ref\EasyEat.dll
 C:\Users\студент\Desktop\EasyEat-main\obj\Debug\net6.0-windows\Pages\HelperPages\DishInfoPage.g.cs
 C:\Users\студент\Desktop\EasyEat-main\obj\Debug\net6.0-windows\Pages\HelperPages\DishInfoPage.baml
+C:\Users\d169\Desktop\EasyEat\obj\Debug\net6.0-windows\Pages\HelperPages\DishInfoPage.g.cs
+C:\Users\d169\Desktop\EasyEat\obj\Debug\net6.0-windows\Pages\HelperPages\DishInfoPage.baml
