@@ -55,7 +55,7 @@ namespace EasyEat.Pages
         {
             if (ChooseGenderLV.SelectedIndex != -1)
             {
-                AnimationManager.StartAnimation(new MainPage());
+                AnimationManager.GoToPageAnimation(new MainPage());
             }
         }
 

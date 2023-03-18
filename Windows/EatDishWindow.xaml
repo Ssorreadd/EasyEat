@@ -20,14 +20,28 @@
         
         <TextBox Name="SearchBox" TextChanged="SearchBox_TextChanged" />
 
-        <ListView Name="ProductsLV" ItemContainerStyle="{StaticResource ProductsItemStyle}" Style="{StaticResource ProductsStyleLV}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Grid.Row="1">
+        <Border Background="DimGray" Opacity="0.28" Margin="10 10 10 10"  Grid.Row="1" CornerRadius="20 20 20 20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="5" ShadowDepth="2" Opacity="0.28"/>
+            </Border.Effect>
+        </Border>
+
+        <Border Background="DimGray" Opacity="0.28" Margin="10 10 10 10"  Grid.Row="1" Grid.Column="2" CornerRadius="20 20 20 20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="5" ShadowDepth="2" Opacity="0.28"/>
+            </Border.Effect>
+        </Border>
+        
+        <ListView Name="ProductsLV" Margin="10 10 10 10" ItemContainerStyle="{StaticResource ProductsItemStyle}" Style="{StaticResource ProductsStyleLV}" SelectionChanged="ProductsLV_SelectionChanged" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Grid.Row="1">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid Margin="10">
-                        <StackPanel Orientation="Vertical">
-                            <Viewbox Height="22" VerticalAlignment="Center" HorizontalAlignment="Left">
-                                <CheckBox Content="{Binding Name}"/>
-                            </Viewbox>
+                        <StackPanel Orientation="Horizontal">
+                            <!--<Viewbox Height="22" VerticalAlignment="Center" HorizontalAlignment="Left">
+                                <CheckBox Content="{Binding Name}" x:Name="ProductCheckBox"/>
+                            </Viewbox>-->
+                            <TextBlock x:Name="ProductName" Text="{Binding Name}" MaxWidth="300" TextWrapping="Wrap" FontSize="18"/>
+
                             <!--<TextBlock x:Name="ProductName" Text="{Binding Name}" FontSize="24" HorizontalAlignment="Center" FontFamily="Comic Sans MS" Margin="0 15 0 0" />-->
 
 
@@ -38,5 +52,7 @@
             </ListView.ItemTemplate>
         </ListView>
 
+        <Frame Grid.Row="1" Grid.Column="1" Name="EatDishWindowFrame" NavigationUIVisibility="Hidden" Margin="10 150 10 150" Height="260"/>
+        
     </Grid>
 </Window>

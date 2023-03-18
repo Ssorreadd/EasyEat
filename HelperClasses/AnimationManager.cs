@@ -12,11 +12,12 @@ namespace EasyEat.HelperClasses
         public static bool IsPlaying { get; private set; }
 
         /// <summary>
+        /// Стандартная версия аниматора.<br/>
         /// Принимает в качестве параметра страницу, на которую нужно перейти.<br/>
         /// Если оставить принимаемое значение пустым - будет произведен переход на предыдущую страницу, если такая имеется.
         /// </summary>
         /// <param name="requiredPage">Страница для перехода</param>
-        public static async void StartAnimation(Page? requiredPage = null)
+        public static async void GoToPageAnimation(Page? requiredPage = null)
         {
             await Task.Run(() =>
             {
@@ -57,6 +58,65 @@ namespace EasyEat.HelperClasses
                     }));
 
                     Thread.Sleep(5);
+                }
+
+                IsPlaying = false;
+            });
+        }
+
+        /// <summary>
+        /// Универсальная версия аниматора.<br/>
+        /// Принимает в качестве параметров экземпляр объекта Frame и страницу для перехода.<br/>
+        /// Если страница имеет значение NULL, то будет осуществлена полная очистка свойства Frame.Content.
+        /// </summary>
+        /// <param name="hostFrame">Экземпляр объекта Frame</param>
+        /// <param name="requiredPage">Страница для перехода</param>
+        public static async void UniversalAnimation(Frame hostFrame, Page requiredPage = null)
+        {
+            await Task.Run(() =>
+            {
+                if (IsPlaying)
+                {
+                    return;
+                }
+
+                IsPlaying = true;
+
+                for (double i = 1.0; i >= 0; i -= 0.025)
+                {
+                    Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Normal, new Action(() =>
+                    {
+                        hostFrame.Opacity = i;
+                    }));
+
+                    Thread.Sleep(3);
+                }
+
+                Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Normal, new Action(() =>
+                {
+                    if (requiredPage != null)
+                    {
+                        hostFrame.Navigate(requiredPage);
+                    }
+                    else
+                    {
+                        hostFrame.Content = null;
+
+                        while (hostFrame.NavigationService.RemoveBackEntry() != null)
+                        {
+                            hostFrame.Content = null;
+                        }
+                    }
+                }));
+
+                for (double i = 0.0; i <= 1.0; i += 0.025)
+                {
+                    Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Normal, new Action(() =>
+                    {
+                        hostFrame.Opacity = i;
+                    }));
+
+                    Thread.Sleep(3);
                 }
 
                 IsPlaying = false;

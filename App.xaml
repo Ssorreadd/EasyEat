@@ -204,7 +204,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type ListView}">
                         <Border x:Name="Bd"  Background="{TemplateBinding Background}" CornerRadius="50" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="1" SnapsToDevicePixels="true">
-                            <ScrollViewer Focusable="false" Width=" Padding="{TemplateBinding Padding}">
+                            <ScrollViewer Focusable="false" Padding="{TemplateBinding Padding}">
                                 <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
                             </ScrollViewer>
                         </Border>
@@ -226,13 +226,13 @@
             </Setter>
         </Style>
         <Style TargetType="ListViewItem" x:Key="ProductsItemStyle">
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Background" Value="#98C79D"/>
+            <Setter Property="BorderBrush" Value="#80ae85"/>
             <Setter Property="BorderThickness" Value="1.5"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="ListViewItem">
-                        <Border x:Name="border" Margin="5" CornerRadius="20" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
+                        <Border x:Name="border" Margin="5" CornerRadius="15" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
                             <ContentPresenter x:Name="content"/>
                         </Border>
                     </ControlTemplate>

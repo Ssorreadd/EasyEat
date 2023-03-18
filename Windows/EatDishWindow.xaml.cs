@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -11,7 +12,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using BaseLibrary;
+using EasyEat.HelperClasses;
+using EasyEat.Pages.HelperPages;
 
 namespace EasyEat.Windows
 {
@@ -23,6 +27,7 @@ namespace EasyEat.Windows
         public EatDishWindow()
         {
             InitializeComponent();
+
             UpdateSource();
         }
 
@@ -45,5 +50,18 @@ namespace EasyEat.Windows
         {
             UpdateSource();
         }
+
+        private void ProductsLV_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (ProductsLV.SelectedIndex != -1)
+            {
+                AnimationManager.UniversalAnimation(EatDishWindowFrame, new DishInfoPage(ProductsLV.SelectedItem as Product));
+            }
+            else
+            {
+                AnimationManager.UniversalAnimation(EatDishWindowFrame);
+            }
+        }
+        
     }
 }

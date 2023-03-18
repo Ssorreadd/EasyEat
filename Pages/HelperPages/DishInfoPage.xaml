@@ -1,0 +1,39 @@
+﻿<Page x:Class="EasyEat.Pages.HelperPages.DishInfoPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EasyEat.Pages.HelperPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="260" d:DesignWidth="346.666666666667"
+      Title="DishInfoPage">
+
+    <Grid>
+        <Border Background="DimGray" Opacity="0.28" Grid.Row="1" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="5" ShadowDepth="2" Opacity="0.28"/>
+            </Border.Effect>
+        </Border>
+
+        <StackPanel Orientation="Vertical">
+            <!--<Label Content="ProductNameLabel" HorizontalAlignment="Center" Margin="5" FontSize="20"/>-->
+            <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" Margin="5" FontSize="20"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <!--<TextBlock Text="Ккал на 1 гр:" FontSize="14"/>-->
+                <TextBlock Text="{Binding CaloriesPerGram, StringFormat={}{0} ккал/гр }" FontSize="14"/>
+            </StackPanel>
+
+
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBox x:Name="GrammBox" Width="60" Height="22" Margin="5 5 0 5"/>
+                <TextBlock Text="Гр." Margin="0 5 5 5" VerticalAlignment="Center"/>
+            </StackPanel>
+        </StackPanel>
+
+        <Button Content="Добавить" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="40" Width="100"/>
+    </Grid>
+</Page>

@@ -28,7 +28,7 @@ namespace EasyEat.Pages
 
         private void back_Click(object sender, RoutedEventArgs e)
         {
-            AnimationManager.StartAnimation();
+            AnimationManager.GoToPageAnimation();
         }
 
         private void next_Click(object sender, RoutedEventArgs e)

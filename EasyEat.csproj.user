@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Pages\HelperPages\DishInfoPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\MainPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -23,6 +26,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Pages\HelperPages\DishInfoPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Windows\EatDishWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
